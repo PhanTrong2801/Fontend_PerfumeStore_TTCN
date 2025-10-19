@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromiee-Nước hoa cap cấp</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+ <body class="bg-gray-50">
+
+    <!-- Header -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <nav class="container mx-auto px-6 py-3">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
+
+      <!-- MENU CHÍNH -->
+      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="#" class="hover:text-blue-600 transition">Trang chủ</a>
+        <a href="#" class="hover:text-blue-600 transition">Sản phẩm</a>
+        <a href="#" class="hover:text-blue-600 transition">Liên hệ</a>
+        <a href="#" class="hover:text-blue-600 transition">Về chúng tôi</a>
+      </div>
+
+      <!-- ICON -->
+      <div class="flex space-x-5 text-gray-700 text-lg">
+        <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
+        <button
+          onclick="document.getElementById('loginModal').classList.remove('hidden')"
+          class="hover:text-gray-800"
+        >
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="relative md:hidden mt-3 flex justify-center group">
+      <!-- Nút Trang chủ -->
+      <button class="text-gray-800 font-medium hover:text-blue-600 transition">
+        Trang chủ
+      </button>
+
+      <!-- Dropdown menu -->
+      <div
+        class="absolute top-full mt-2 w-44 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transform origin-top transition-all duration-300"
+      >
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Sản phẩm</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Liên hệ</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Về chúng tôi</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- Nội dung trang -->
+    <section class="pt-24 text-center">
+  
+    </section>
+
+    <!-- Modal đăng nhập -->
+    <div
+      id="loginModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-2xl shadow-lg w-80 p-6 relative">
+        <!-- Nút đóng -->
+        <button
+          onclick="document.getElementById('loginModal').classList.add('hidden')"
+          class="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Đăng nhập</h2>
+
+        <form class="space-y-4">
+          <div>
+            <label for="email" class="block text-gray-700 text-sm mb-1">Email</label>
+            <input
+              id="email"
+              type="email"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Nhập email"
+            />
+          </div>
+          <div>
+            <label for="password" class="block text-gray-700 text-sm mb-1">Mật khẩu</label>
+            <input
+              id="password"
+              type="password"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Nhập mật khẩu"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+          >
+            Đăng nhập
+          </button>
+        </form>
+
+        <p class="text-center text-sm text-gray-600 mt-4">
+          Chưa có tài khoản?
+          <a href="#" class="text-blue-600 hover:underline">Đăng ký</a>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
+      <!--End Header -->
+
+    
+</body>
+</html>
