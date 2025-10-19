@@ -11,57 +11,75 @@
  <body class="bg-gray-50">
 
     <!-- Header -->
-<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-  <nav class="container mx-auto px-6 py-3">
-    <div class="flex justify-between items-center">
-      <!-- Logo -->
-      <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
 
-      <!-- MENU CHÍNH -->
-      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="#" class="hover:text-blue-600 transition">Trang chủ</a>
-        <a href="#" class="hover:text-blue-600 transition">Sản phẩm</a>
-        <a href="#" class="hover:text-blue-600 transition">Liên hệ</a>
-        <a href="#" class="hover:text-blue-600 transition">Về chúng tôi</a>
-      </div>
+        <!-- MENU CHÍNH -->
+        <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="#" class="hover:text-blue-600 transition">Trang chủ</a>
+            <a href="#" class="hover:text-blue-600 transition">Sản phẩm</a>
+            <a href="#" class="hover:text-blue-600 transition">Liên hệ</a>
+            <a href="#" class="hover:text-blue-600 transition">Về chúng tôi</a>
+        </div>
 
-      <!-- ICON -->
-      <div class="flex space-x-5 text-gray-700 text-lg">
-        <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-phone"></i></a>
-        <a href="#" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
-        <button
-          onclick="document.getElementById('loginModal').classList.remove('hidden')"
-          class="hover:text-gray-800"
-        >
-          <i class="fa-solid fa-user"></i>
+        <!-- ICON -->
+        <div class="flex space-x-5 text-gray-700 text-lg">
+            <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-green-600"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
+            <button
+            onclick="document.getElementById('loginModal').classList.remove('hidden')"
+            class="hover:text-gray-800"
+            >
+            <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div class="relative md:hidden mt-3 flex justify-center group">
+        <!-- Nút Trang chủ -->
+        <button class="text-gray-800 font-medium hover:text-blue-600 transition">
+            Trang chủ
         </button>
-      </div>
-    </div>
 
-    <!-- MENU MOBILE -->
-    <div class="relative md:hidden mt-3 flex justify-center group">
-      <!-- Nút Trang chủ -->
-      <button class="text-gray-800 font-medium hover:text-blue-600 transition">
-        Trang chủ
-      </button>
-
-      <!-- Dropdown menu -->
-      <div
-        class="absolute top-full mt-2 w-44 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transform origin-top transition-all duration-300"
-      >
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Sản phẩm</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Liên hệ</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Về chúng tôi</a>
-      </div>
-    </div>
-  </nav>
-</header>
+        <!-- Dropdown menu -->
+        <div
+            class="absolute top-full mt-2 w-44 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transform origin-top transition-all duration-300"
+        >
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Sản phẩm</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Liên hệ</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Về chúng tôi</a>
+        </div>
+        </div>
+    </nav>
+    </header>
+  <!--End Header -->
 
     <!-- Nội dung trang -->
-    <section class="pt-24 text-center">
-  
-    </section>
+    <!-- Banner -->
+      <section class="text-center">
+        <div class="banner flex items-center justify-center relative">
+          <div class="banner-overlay absolute inset-0 bg-black bg-opacity-40"></div>
+
+          <div class="banner-content relative text-white p-8 rounded-lg max-w-2xl">
+            <h1 class="text-4xl font-bold mb-4">Khám phá hương thơm tinh tế</h1>
+            <p class="text-lg mb-6">
+              Tận hưởng sự sang trọng từ những dòng nước hoa danh tiếng và nhiều thương hiệu đẳng cấp khác.
+            </p>
+            <a
+              href="#"
+              class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition"
+            >
+              Mua ngay
+            </a>
+          </div>
+        </div>
+      </section>
+    <!--End Nội dung trang -->
 
     <!-- Modal đăng nhập -->
     <div
@@ -112,10 +130,10 @@
         </p>
       </div>
     </div>
+    <!--End Modal đăng nhập -->
 
-  </body>
-</html>
-      <!--End Header -->
+
+    
 
     
 </body>
