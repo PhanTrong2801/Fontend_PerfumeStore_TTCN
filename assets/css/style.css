@@ -2,6 +2,10 @@ body{
     font-family: font-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Xóa khoảng trống đầu trang */
 section {
   margin-top: 0;

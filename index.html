@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aromiee-Nước hoa cap cấp</title>
+    <title>Aromiee-Nước hoa cao cấp</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./assets/js/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
  <body class="bg-gray-50">
@@ -22,7 +23,7 @@
             <a href="#" class="hover:text-blue-600 transition">Trang chủ</a>
             <a href="#" class="hover:text-blue-600 transition">Sản phẩm</a>
             <a href="#" class="hover:text-blue-600 transition">Liên hệ</a>
-            <a href="#" class="hover:text-blue-600 transition">Về chúng tôi</a>
+            <a href="#vechungtoi" class="hover:text-pink-600 transition">Về chúng tôi</a>
         </div>
 
         <!-- ICON -->
@@ -59,29 +60,276 @@
     </header>
   <!--End Header -->
 
-    <!-- Nội dung trang -->
+  <!-- Nội dung trang -->
     <!-- Banner -->
-      <section class="text-center">
-        <div class="banner flex items-center justify-center relative">
+      <section class="text-center relative overflow-hidden group">
+        <div class="banner flex items-center justify-center relative transition-transform duration-700 ease-out group-hover:scale-105" >
+          <!-- Lớp phủ mờ -->
           <div class="banner-overlay absolute inset-0 bg-black bg-opacity-40"></div>
 
-          <div class="banner-content relative text-white p-8 rounded-lg max-w-2xl">
-            <h1 class="text-4xl font-bold mb-4">Khám phá hương thơm tinh tế</h1>
-            <p class="text-lg mb-6">
-              Tận hưởng sự sang trọng từ những dòng nước hoa danh tiếng và nhiều thương hiệu đẳng cấp khác.
+          <!-- Nội dung -->
+          <div class="banner-content relative text-white p-8 rounded-lg max-w-2xl transition-transform duration-700 group-hover:scale-110" >
+            <h1 class="text-4xl font-bold mb-4 transition-transform duration-700 group-hover:scale-110">
+              Khám phá hương thơm tinh tế
+            </h1>
+            <p class="text-lg mb-6 transition-transform duration-700 group-hover:scale-105">
+              Tận hưởng sự sang trọng từ những dòng nước hoa danh tiếng như Chanel, Dior và nhiều thương hiệu đẳng cấp khác.
             </p>
-            <a
-              href="#"
-              class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition"
-            >
+            <a href="#" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-700 group-hover:scale-110" >
               Mua ngay
             </a>
           </div>
         </div>
       </section>
-    <!--End Nội dung trang -->
+    <!--End Banner -->
+    
+    <!-- Sản phẩm nổi bật -->
+      <section class="py-16 bg-gray-50 mt-12">
+        <div class="container mx-auto px-6">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+              Sản phẩm nổi bật
+            </h2>
 
-    <!-- Modal đăng nhập -->
+            <!-- Lưới sản phẩm -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+            >
+              <!-- Sản phẩm -->
+              <div
+                class="group bg-white shadow-md rounded-xl overflow-hidden transition transform hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src="./assets/image/chanelNo5.jpg"
+                  alt="Chanel No.5"
+                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="p-5">
+                  <h3 class="text-lg font-semibold">Chanel No.5</h3>
+                  <p class="text-pink-600 font-bold mt-2">3.200.000₫</p>
+                  <button
+                    onclick="openModal('Chanel No.5', 'Hương thơm cổ điển, quyến rũ và sang trọng dành cho phụ nữ tinh tế.')"
+                    class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg transition"
+                  >
+                    Xem chi tiết
+                  </button>
+                  <button
+                    class="mt-2 w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition"
+                  >
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dior -->
+              <div
+                class="group bg-white shadow-md rounded-xl overflow-hidden transition transform hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src="./assets/image/diorsauvage.jpg"
+                  alt="Dior Sauvage"
+                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="p-5">
+                  <h3 class="text-lg font-semibold">Dior Sauvage</h3>
+                  <p class="text-pink-600 font-bold mt-2">2.850.000₫</p>
+                  <button
+                    onclick="openModal('Dior Sauvage', 'Mùi hương mạnh mẽ, tự do, mang đậm phong cách nam tính hiện đại.')"
+                    class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg transition"
+                  >
+                    Xem chi tiết
+                  </button>
+                  <button
+                    class="mt-2 w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition"
+                  >
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+
+              <!-- Gucci -->
+              <div
+                class="group bg-white shadow-md rounded-xl overflow-hidden transition transform hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src="./assets/image/gucciBloom.jpg"
+                  alt="Gucci Bloom"
+                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="p-5">
+                  <h3 class="text-lg font-semibold">Gucci Bloom</h3>
+                  <p class="text-pink-600 font-bold mt-2">2.600.000₫</p>
+                  <button
+                    onclick="openModal('Gucci Bloom', 'Mang đến cảm giác tươi mới, ngọt ngào với hương hoa tinh tế và quyến rũ.')"
+                    class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg transition"
+                  >
+                    Xem chi tiết
+                  </button>
+                  <button
+                    class="mt-2 w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition"
+                  >
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+
+              <!-- YSL -->
+              <div
+                class="group bg-white shadow-md rounded-xl overflow-hidden transition transform hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src="./assets/image/YSLLibre.jpg"
+                  alt="YSL Libre"
+                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="p-5">
+                  <h3 class="text-lg font-semibold">YSL Libre</h3>
+                  <p class="text-pink-600 font-bold mt-2">3.000.000₫</p>
+                  <button
+                    onclick="openModal('YSL Libre', 'Hương hoa oải hương và cam bergamot, tượng trưng cho sự tự do và hiện đại.')"
+                    class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg transition"
+                  >
+                    Xem chi tiết
+                  </button>
+                  <button
+                    class="mt-2 w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg transition"
+                  >
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Sản phẩm nổi bật -->
+
+    <!-- Modal xem chi tiết -->
+        <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"  >
+          <div class="bg-white p-8 rounded-lg shadow-lg max-w-md text-center relative">
+            <button onclick="closeModal()"class="absolute top-2 right-2 text-gray-500 hover:text-gray-800" >
+              ✕
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4"></h3>
+            <p id="modalDescription" class="text-gray-700 mb-6"></p>
+            <button onclick="closeModal()" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-lg transition" >
+              Đóng
+            </button>
+          </div>
+        </div>
+    <!--End Modal xem chi tiết --> 
+
+
+    <!-- Về chúng tôi -->
+      <section id="vechungtoi" class="py-20 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          
+          <!-- Hình minh họa -->
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80"
+              alt="Về chúng tôi"
+              class="rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <!-- Nội dung giới thiệu -->
+          <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Về chúng tôi</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+              Aromiee là thương hiệu chuyên cung cấp nước hoa cao cấp với sứ mệnh mang đến cho bạn những trải nghiệm hương thơm tinh tế nhất.  
+              Chúng tôi hợp tác cùng các thương hiệu nổi tiếng như <span class="font-semibold text-pink-600">Chanel</span>, <span class="font-semibold text-pink-600">Dior</span>, <span class="font-semibold text-pink-600">YSL</span>…  
+              Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng, nhằm tôn vinh phong cách và cá tính riêng của bạn.
+            </p>
+
+            <a
+              href="#sanpham"
+              class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition"
+            >
+              Khám phá sản phẩm
+            </a>
+          </div>
+        </div>
+      </section>
+    <!--End Về chúng tôi -->
+
+
+    <!-- Phần Tầm nhìn & Đội ngũ -->
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+          <!-- Tiêu đề -->
+          <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+            Tầm nhìn & Giá trị
+          </h2>
+          <p class="text-gray-600 text-lg mb-12" data-aos="fade-up" data-aos-delay="100">
+            Chúng tôi không chỉ bán nước hoa – chúng tôi mang đến phong cách sống, sự tự tin và cảm xúc.
+          </p>
+
+          <!-- 3 cột giá trị -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <!-- Tầm nhìn -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-500 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="text-pink-600 mb-4 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Tầm nhìn</h3>
+              <p class="text-gray-600">
+                Trở thành thương hiệu nước hoa hàng đầu Việt Nam, nơi mọi người đều tìm thấy mùi hương thể hiện bản thân.
+              </p>
+            </div>
+
+            <!-- Giá trị cốt lõi -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-500 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-pink-600 mb-4 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8c-2.28 0-4 1.72-4 4s1.72 4 4 4 4-1.72 4-4-1.72-4-4-4zM4 12a8 8 0 0116 0A8 8 0 014 12z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Giá trị cốt lõi</h3>
+              <p class="text-gray-600">
+                Chất lượng – Tinh tế – Trải nghiệm là ba yếu tố làm nên sự khác biệt của Aromiee trên thị trường.
+              </p>
+            </div>
+
+            <!-- Đội ngũ -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-500 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="text-pink-600 mb-4 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5V10H2v10h5m10 0v-2a2 2 0 00-2-2H9a2 2 0 00-2 2v2" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Đội ngũ</h3>
+              <p class="text-gray-600">
+                Được hình thành từ niềm đam mê hương thơm, đội ngũ Aromiee luôn không ngừng sáng tạo để mang đến sản phẩm tốt nhất.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+     <!--End Phần Tầm nhìn & Đội ngũ -->
+
+
+  <!--End Nội dung trang -->
+
+  <!-- Modal đăng nhập -->
     <div
       id="loginModal"
       class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
@@ -130,9 +378,67 @@
         </p>
       </div>
     </div>
-    <!--End Modal đăng nhập -->
+  <!--End Modal đăng nhập -->
 
+  
+  <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
+        <!-- Cột 1: Giới thiệu -->
+        <div data-aos="fade-up">
+          <h3 class="text-2xl font-semibold text-white mb-4">Aromiee</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Aromiee – Thương hiệu nước hoa cao cấp mang đến hương thơm tinh tế và đẳng cấp.
+            Chúng tôi tin rằng mỗi mùi hương đều có thể kể một câu chuyện riêng.
+          </p>
+        </div>
+
+        <!-- Cột 2: Liên hệ -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-semibold text-white mb-4">Liên hệ</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              📍 <span class="ml-1">123 Đường Hoa Lan, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+            <li>
+              ☎️ <a href="tel:0123456789" class="hover:text-pink-500 transition">0123 456 789</a>
+            </li>
+            <li>
+              📧 <a href="mailto:contact@aromiee.vn" class="hover:text-pink-500 transition">contact@aromiee.vn</a>
+            </li>
+            <li>
+              🕒 <span class="ml-1">Thứ 2 – CN: 9:00 - 21:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên kết nhanh -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-white mb-4">Liên kết nhanh</h3>
+          <ul class="space-y-3">
+            <li><a href="#trangchu" class="hover:text-pink-500 transition">Trang chủ</a></li>
+            <li><a href="#sanpham" class="hover:text-pink-500 transition">Sản phẩm nổi bật</a></li>
+            <li><a href="#vechungtoi" class="hover:text-pink-500 transition">Về chúng tôi</a></li>
+            <li><a href="#lienhe" class="hover:text-pink-500 transition">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Đường kẻ ngăn cách -->
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <!-- Icon mạng xã hội -->
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="text-gray-500 text-sm">
+          © 2025 <span class="text-pink-500 font-semibold">Aromiee</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  <!--End Footer -->
     
 
     
