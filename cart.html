@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giỏ hàng - Aromiee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/cart.css">
+  <script src="./assets/js/cart.js" defer></script>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
+
+      <!-- MENU -->
+      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Trang chủ</a>
+        <a href="sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a>
+        <a href="index.html#lienhe" class="hover:text-blue-600 transition">Liên hệ</a>
+        <a href="index.html#vechungtoi" class="hover:text-pink-600 transition">Về chúng tôi</a>
+      </div>
+
+      <!-- ICON -->
+      <div class="flex space-x-5 text-gray-700 text-lg">
+        <a href="cart.html" class="text-blue-600"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="hover:text-gray-800"><i class="fa-solid fa-user"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Nội dung giỏ hàng -->
+  <main class="container mx-auto px-6 pt-32 pb-20">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">🛒 Giỏ hàng của bạn</h1>
+
+    <!-- Bảng giỏ hàng -->
+    <div class="overflow-x-auto bg-white rounded-xl shadow-md p-6">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b text-gray-700">
+            <th class="pb-3">Sản phẩm</th>
+            <th class="pb-3 text-center">Giá</th>
+            <th class="pb-3 text-center">Số lượng</th>
+            <th class="pb-3 text-center">Tổng</th>
+            <th class="pb-3 text-center">Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Mẫu sản phẩm -->
+          <tr class="border-b hover:bg-gray-50 transition">
+            <td class="flex items-center gap-4 py-4">
+              <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=500&q=80" class="w-16 h-16 rounded-lg object-cover" />
+              <div>
+                <h3 class="font-semibold">Chanel Coco Mademoiselle</h3>
+                <p class="text-gray-500 text-sm">Hương thơm tinh tế, quyến rũ.</p>
+              </div>
+            </td>
+            <td class="text-center text-pink-600 font-semibold">3.200.000₫</td>
+            <td class="text-center">
+              <div class="flex justify-center items-center">
+                <button class="px-2 py-1 bg-gray-200 rounded-l hover:bg-gray-300">-</button>
+                <input type="number" value="1" class="w-12 text-center border-t border-b border-gray-300" />
+                <button class="px-2 py-1 bg-gray-200 rounded-r hover:bg-gray-300">+</button>
+              </div>
+            </td>
+            <td class="text-center font-bold text-gray-800">3.200.000₫</td>
+            <td class="text-center">
+              <button class="text-red-500 hover:text-red-700 transition">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Thêm sản phẩm khác tương tự -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tổng cộng -->
+    <div class="mt-8 flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-xl shadow-md">
+      <p class="text-xl font-semibold text-gray-800">Tổng cộng: <span class="text-pink-600">3.200.000₫</span></p>
+      <button class="mt-4 md:mt-0 bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full font-medium transition">
+        <i class="fa-solid fa-credit-card mr-2"></i>Tiến hành thanh toán
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+    <footer id="lienhe" class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Cột 1: Giới thiệu -->
+        <div data-aos="fade-up">
+          <h3 class="text-2xl font-semibold text-white mb-4">Aromiee</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Aromiee – Thương hiệu nước hoa cao cấp mang đến hương thơm tinh tế và đẳng cấp.
+            Chúng tôi tin rằng mỗi mùi hương đều có thể kể một câu chuyện riêng.
+          </p>
+        </div>
+
+        <!-- Cột 2: Liên hệ -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-semibold text-white mb-4">Liên hệ</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li>
+              📍 <span class="ml-1">123 Đường Hoa Lan, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+            <li>
+              ☎️ <a href="tel:0123456789" class="hover:text-pink-500 transition">0123 456 789</a>
+            </li>
+            <li>
+              📧 <a href="mailto:contact@aromiee.vn" class="hover:text-pink-500 transition">contact@aromiee.vn</a>
+            </li>
+            <li>
+              🕒 <span class="ml-1">Thứ 2 – CN: 9:00 - 21:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên kết nhanh -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-white mb-4">Liên kết nhanh</h3>
+          <ul class="space-y-3">
+            <li><a href="#trangchu" class="hover:text-pink-500 transition">Trang chủ</a></li>
+            <li><a href="#sanpham" class="hover:text-pink-500 transition">Sản phẩm nổi bật</a></li>
+            <li><a href="#vechungtoi" class="hover:text-pink-500 transition">Về chúng tôi</a></li>
+            <li><a href="#lienhe" class="hover:text-pink-500 transition">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Đường kẻ ngăn cách -->
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <!-- Icon mạng xã hội -->
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-pink-500 transition text-xl"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="text-gray-500 text-sm">
+          © 2025 <span class="text-pink-500 font-semibold">Aromiee</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  <!--End Footer -->
+</body>
+</html>

@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/cart.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
  <body class="bg-gray-50">
 
-    <!-- Header -->
+  <!-- Header -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <nav class="container mx-auto px-6 py-3">
         <div class="flex justify-between items-center">
@@ -21,8 +22,8 @@
         <!-- MENU CHÍNH -->
         <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
             <a href="#" class="hover:text-blue-600 transition">Trang chủ</a>
-            <a href="#" class="hover:text-blue-600 transition">Sản phẩm</a>
-            <a href="#" class="hover:text-blue-600 transition">Liên hệ</a>
+            <a href="sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a>
+            <a href="#lienhe" class="hover:text-blue-600 transition">Liên hệ</a>
             <a href="#vechungtoi" class="hover:text-pink-600 transition">Về chúng tôi</a>
         </div>
 
@@ -30,7 +31,7 @@
         <div class="flex space-x-5 text-gray-700 text-lg">
             <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="hover:text-green-600"><i class="fa-solid fa-phone"></i></a>
-            <a href="#" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="cart.html" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
             <button
             onclick="document.getElementById('loginModal').classList.remove('hidden')"
             class="hover:text-gray-800"
@@ -243,7 +244,7 @@
             </p>
 
             <a
-              href="#sanpham"
+              href="sanpham.html"
               class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition"
             >
               Khám phá sản phẩm
@@ -382,7 +383,7 @@
 
   
   <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
+    <footer id="lienhe" class="bg-gray-900 text-gray-300 py-12">
       <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <!-- Cột 1: Giới thiệu -->
