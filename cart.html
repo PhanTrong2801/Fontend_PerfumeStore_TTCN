@@ -7,76 +7,83 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/cart.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/cart.js" defer></script>
 </head>
 
 <body class="bg-gray-50">
+
   <!-- Header -->
-  <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-bold text-gray-800">Aromiee</a>
 
-      <!-- MENU -->
-      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="index.html" class="hover:text-blue-600 transition">Trang chủ</a>
-        <a href="sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a>
-        <a href="index.html#lienhe" class="hover:text-blue-600 transition">Liên hệ</a>
-        <a href="index.html#vechungtoi" class="hover:text-pink-600 transition">Về chúng tôi</a>
-      </div>
+        <!-- MENU CHÍNH -->
+        <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-blue-600 transition">Trang chủ</a>
+            <a href="sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a>
+            <a href="#lienhe" class="hover:text-blue-600 transition">Liên hệ</a>
+            <a href="#vechungtoi" class="hover:text-pink-600 transition">Về chúng tôi</a>
+        </div>
 
-      <!-- ICON -->
-      <div class="flex space-x-5 text-gray-700 text-lg">
-        <a href="cart.html" class="text-blue-600"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="#" class="hover:text-gray-800"><i class="fa-solid fa-user"></i></a>
-      </div>
+        <!-- ICON -->
+        <div class="flex space-x-5 text-gray-700 text-lg">
+            <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-green-600"><i class="fa-solid fa-phone"></i></a>
+            <a href="cart.html" class="hover:text-yellow-500"><i class="fa-solid fa-cart-shopping"></i></a>
+            <button
+            onclick="document.getElementById('loginModal').classList.remove('hidden')"
+            class="hover:text-gray-800"
+            >
+            <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div class="relative md:hidden mt-3 flex justify-center group">
+        <!-- Nút Trang chủ -->
+        <button class="text-gray-800 font-medium hover:text-blue-600 transition">
+            Trang chủ
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+            class="absolute top-full mt-2 w-44 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transform origin-top transition-all duration-300"
+        >
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Sản phẩm</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Liên hệ</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Về chúng tôi</a>
+        </div>
+        </div>
     </nav>
-  </header>
+    </header>
+  <!--End Header -->
 
   <!-- Nội dung giỏ hàng -->
   <main class="container mx-auto px-6 pt-32 pb-20">
     <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">🛒 Giỏ hàng của bạn</h1>
 
-    <!-- Bảng giỏ hàng -->
-    <div class="overflow-x-auto bg-white rounded-xl shadow-md p-6">
-      <table class="w-full text-left border-collapse">
-        <thead>
-          <tr class="border-b text-gray-700">
-            <th class="pb-3">Sản phẩm</th>
-            <th class="pb-3 text-center">Giá</th>
-            <th class="pb-3 text-center">Số lượng</th>
-            <th class="pb-3 text-center">Tổng</th>
-            <th class="pb-3 text-center">Thao tác</th>
-          </tr>
-        </thead>
-        <tbody id="cart-items">
-          <!-- Mẫu sản phẩm -->
-          <tr class="border-b hover:bg-gray-50 transition">
-            <td class="flex items-center gap-4 py-4">
-              <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=500&q=80" class="w-16 h-16 rounded-lg object-cover" />
-              <div>
-                <h3 class="font-semibold">Chanel Coco Mademoiselle</h3>
-                <p class="text-gray-500 text-sm">Hương thơm tinh tế, quyến rũ.</p>
-              </div>
-            </td>
-            <td class="text-center text-pink-600 font-semibold">3.200.000₫</td>
-            <td class="text-center">
-              <div class="flex justify-center items-center">
-                <button class="px-2 py-1 bg-gray-200 rounded-l hover:bg-gray-300">-</button>
-                <input type="number" value="1" class="w-12 text-center border-t border-b border-gray-300" />
-                <button class="px-2 py-1 bg-gray-200 rounded-r hover:bg-gray-300">+</button>
-              </div>
-            </td>
-            <td class="text-center font-bold text-gray-800">3.200.000₫</td>
-            <td class="text-center">
-              <button class="text-red-500 hover:text-red-700 transition">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </td>
-          </tr>
 
-          <!-- Thêm sản phẩm khác tương tự -->
-        </tbody>
+        <!-- Bảng giỏ hàng -->
+          <div class="overflow-x-auto bg-white rounded-xl shadow-md p-6">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b text-gray-700">
+                  <th class="pb-3">Sản phẩm</th>
+                  <th class="pb-3 text-center">Giá</th>
+                  <th class="pb-3 text-center">Số lượng</th>
+                  <th class="pb-3 text-center">Tổng</th>
+                  <th class="pb-3 text-center">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="cart-items">
+                <!-- Các sản phẩm được thêm sẽ hiển thị ở đây -->
+              </tbody>
+            </table>
+          </div>
       </table>
     </div>
 
